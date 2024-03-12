@@ -146,11 +146,21 @@ gap: 40px;
 /**========================================Hero===========*/
 
 .hero { padding: 188px 0 188px;
-    background: #2e2f42;
-    
+
+background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg); 
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
-.hero-wrap{ 
+.hero-wrap{
    }
 
 .hero-title {
@@ -210,6 +220,8 @@ margin: 0 auto;
 .features-item {
     width: calc((100% - 3 * 24px) / 4) ;
 }
+
+.features-item-icon{}
 
 .features-subtitle {
     font-weight: 500;
@@ -354,6 +366,9 @@ padding-bottom: 16px;
 .footer {
     background: #2e2f42;
     padding: 100px 0;
+    display: flex;
+        align-items: baseline;
+        justify-content: start;
 }
 
 .footer-logo {font-family: "Raleway", sans-serif;
@@ -379,3 +394,34 @@ font-weight: 400;
     padding-top: 8px;
 
 }
+
+.media{display: flex;}
+
+.footer-media {color: #fff;
+    margin-bottom: 16px;
+    
+}
+.footer-media-list {
+}
+.footer-media-item {
+}
+.footer-media-icon {
+}
+.footer-icon {
+}}
+
+.footer-media-list {display: flex;
+    justify-content: center;
+    gap: 16px;}
+
+.footer-media-item {}
+
+.footer-media-icon {}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+    background-color: #31d0aa;}
+
+.footer-icon {fill: #f4f4fd;
+    width: 16px;
+    height: 16px;}
