@@ -65,67 +65,60 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     margin: 0 auto;
 }
 
-.header-container {display: flex;
-    align-items: center;
-}
-
-.header {border-bottom: 1px solid #e7e9fc;
+.header {
+    border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-            0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
-.header-navigation {display: flex;
+.container {
+    max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2e2f42;
 }
 
 .header-logo {
-    font-family: "Raleway", sans-serif;
-font-weight: 700;
-font-size: 18px;
-line-height: 1.17;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #4d5ae5;
-margin-right: 76px;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 76px;
 }
 
-.header-logo:hover,
-.header-logo:focus {color: #404bbf;}
-
-.header-logo-color {color: 
-    #2e2f42;
+.logo-span {
+    color: #2e2f42;
 }
 
-.header-meny-list {
+.header-menu {
     display: flex;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #2e2f42;
-gap: 40px;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-position: relative;
+    font-weight: 500;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.header-menu-title:hover,
+.header-menu-title:focus {
     color: #404bbf;
 }
 
+.header-menu-title {
+    display: block;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.address-contact{display: flex;
-    font-style: normal;
-    gap: 40px;}
-
-.header-meny-list:hover,
-.header-meny-list:focus {color: #404BBF}
-
-.header-studio {color: #2e2f42 ;
-transition: color cubic-bezier(0.4, 0, 0.2, 1);}
-
-.header-studio:focus {color: #404bbf;}
-
-.address-list:focus {color: #404bbf;}
-
-.header-menu-item::after .header-menu-link::after {
+.header-menu-item:nth-child(1) .header-menu-title::after {
     position: absolute;
     display: block;
     content: '';
@@ -136,55 +129,46 @@ transition: color cubic-bezier(0.4, 0, 0.2, 1);}
     background: #404bbf;
 }
 
-.header-meny-link { 
-    padding: 24px 0;
-    display: block;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-meny-link:focus { color: #404bbf;}
-
-.address {font-style: normal;
-    margin-left: auto;
+.header-menu-item:nth-child(1) .header-menu-title {
+    position: relative;
+    color: #404bbf;
 }
 
-.address-contact .address-mail{
+.header-contacts {
     display: flex;
-    font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #434455;
-gap: 40px;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    font-style: normal;
+    gap: 40px;
 }
 
-.address-contact:hover, .address-contact:focus {color: #404BBF;}
-
-.address-mail:hover { color: #404BBF;
+.header-contact {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header-contact:hover,
+.header-contact:focus {
+    color: #404bbf;
+}
 
 
 /**========================================Hero===========*/
 
 .hero { 
-    letter-spacing: 0.02em;
-        background-color: #2e2f42;
-        color: #ffffff;
-        line-height: 1.07;
-        padding-top: 188px;
-        padding-bottom: 188px;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
-        max-width: 1440px;
-        margin-right: auto;
-        margin-left: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-
-
+letter-spacing: 0.02em;
+    background-color: #2e2f42;
+    color: #ffffff;
+    line-height: 1.07;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/people-office\ 1.jpg);
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-wrap{
@@ -395,6 +379,9 @@ margin-bottom: 72px;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item {
@@ -404,11 +391,9 @@ margin-bottom: 72px;
     
 }
 
-.portfolio-item:hover .payment-cover-text{
+.portfolio-list:hover .payment-cover-text{
     transform: translateY(0);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+    
     
 
 
@@ -460,9 +445,7 @@ padding-bottom: 16px;
         color: #f4f4fd;
         background: #4d5ae5;
         height: 300px;
-        padding-top: 40px;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding: 40px 32px;
         display: flex;
         align-items: center;
         transform: translateY(100%);
